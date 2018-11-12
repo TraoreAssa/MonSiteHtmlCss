@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ma page structure</title>
+    <title>Formulaire</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family-salsa" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amitic+SC|Dancing+Script|Old+Standar+TT">
@@ -46,11 +46,64 @@
        <a href="fancy_box.html">Fancy Box</a>
 </nav>
 
+<main>
+    <h2>FORMULAIRE</h2>
+    <section class="formulaire">
+        <form>
+            <label for="Pseudo">Pseudo*</label>
+            <input type="text"id="Pseudo" name="Pseudo"required>
+            <br>
+            <!--*pour champ obligatoire REQUIRED dans l'input-->
+        
+            <label for="name">Prénom</label>
+            <input type="text"id="name" name="name"placeholder="Votre prénom"required>
+            <br>
 
+            <label for="mdp">Mot de passe*</label>
+            <input type="password"id="mdp"name="mdp"required>
+            <br>
+            <!--*pour champ obligatoire REQUIRED dans l'input-->
+            
 
+            <label for="email">email*</label>
+            <input type="email" id="email"name="email"required>
+            <br>
+            <!--*pour champ obligatoire REQUIRED dans l'input-->
+            <!--PLACHOLDER est le texte explicatif en grisé dans le champs non encore rempli-->
+        
+            <label for="file">CV</label>
+            <input type="file"id="file" name="file">
+            <br>
+            <!--type FILE crée un bouton"parcourir"pour aller chercher un fichier-->
+        
+            <label for="choisir">Quels sont vos fruits préférés?</label>
+            <p>
+                <!-- cases à cocheer carrées, CHECKED en coche une par défaut-->
+                <input type ="checkbox" name="choix" checked>Orange
+                <input type="checkbox" name="choix">Fraise
+                <input type="checkbox" name="choix">Mangue
+            </p>
 
+            <label for="cp">Code postal</label>
+            <input type="text" id="id" name="id" maxlength="5"pattern="[0-9]{5" maxlength="5"pattern="[0-9]{5">
+            <br>
+            <!--MAXLENGHT impose un max de caractères et PATTERN permet d'imposer le type de caractères numériques et comme PATTERN permet de préciser le nombre de caractères max, on peut enlever MAXLENGHT ici( on le garde pour les connaissances)-->
+            <label for="Message">Message</label>
+            <textarea id="Message" name="Message" rows="10" cols="35"></textarea>
+            <br>
+            <!--zone de texte avec les réglages de sa taille ROWS et COLS-->
+        
+        
+            <input type="submit" name="Envoyer" value="Envoyer">
+            <input type="reset" name="Annuler" value="Annuler">
+            <br>
+        
+        </form>
+    </section>
 
+</main>
 
+<a href="#logo"><button type="button"><i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i></button></a>
 <footer>
     <!-- zone du bas, ex : liens...  -->
 </footer>

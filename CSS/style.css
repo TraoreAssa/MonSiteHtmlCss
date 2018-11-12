@@ -1,7 +1,6 @@
 *{
-    box-sizing: border-box;/*ça bloque l'élément, le recentre et fait une marge*/
+    box-sizing: border-box;  /*ça bloque l'élement, le recentre et ça fait une marge*/
 }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -11,69 +10,923 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video{
+time, mark, audio, video {
     margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
     vertical-align: baseline;
 }
+
 h1{
     font-size: 70px;
-    color:black;
+    color: white;
     margin-top: 50px;
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-weight: 400;
+    float: left;
 }
 h2{
     font-size: 50px;
-    color: crimson;
+    color: CRIMSON;
     padding: 20px;
     font-weight: bold;
     font-family: 'Amatic SC', cursive;
+
 }
 h3{
-    font-size: 22px;
+   font-size: 22px;
+   color: #2c3e50;
+   padding: 15px;
+}
+h4{
+    text-align: center;
+    margin-top: 30px;
     color: #2c3e50;
-    padding: 15px;
-
+    font-size: 20px;
 }
 h5{
     font-size: 85px;
-    color: purple;
+    color: /*CRIMSON*/purple;
     padding: 20px;
     font-weight: bold;
     font-family: 'Amatic SC', cursive;
+    text-align: center;
 }
 blockquote{
-    font-style: italic;
-    font-size: 120%; 
+   font-style: italic;
+   font-size: 120%;
 }
 strong{
-    font-weight: bold;
+   font-weight: bold;
 }
 main{
-    background: gainsboro;
-    margin: auto;
+    background:rgb(250, 188, 197);
+    margin: 0 auto;
     width: 1000px;
 }
 aside{
-    height: 300px;
+   /*height: 250px;*/
+   height: 300px;
+
 }
 section{
-    margin-top: 50px;
-    padding: 20px;
+   margin-top: 50px;
+   /* background: rgb(206, 188, 206); */
+   padding: 20px;
 }
 footer{
-    background: mistyrose;
-    height: 30px;
+   background:MISTYROSE;
+   height: 30px;
 }
-/******************************HEADER**************************/
+
+/*********************************  DEBUT HEADER  ***********************************/
 header{
-    background-color: slategray;
+   background-color:SLATEGRAY;
+   height: 200px;
 }
+#logo{
+    width: 25%;
+    text-align: center;
+    padding: 15px;
+    float: left;
+}
+#rs{
+    width: 5%;
+    float: right;
+    padding: 20px;
+}
+#rs a{
+    font-size: 30px;
+    color: white;
+    display: block;/*change leur type inline en block pour les mettre les uns en dessous des autres*/
+    text-align: center;
+    padding: 15px 30px 0 0;
+    text-decoration: none;
+}
+#rs a:hover{
+    font-size: 60px;
+    transition: 1s;
+}
+/**********************FIN DE HEADER*******************/
+/*********************DEBUT DE NAV*********************/
+nav{
+    background-color: MISTYROSE;
+    border-bottom: 4px solid slategray;
+    text-align: center;
+    padding: 17px;
+    height:25%;
+}
+nav a{
+    font-family: 'Amatic SC' cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    border: 1px solid pink;
+    padding: 6px 9px;
+    border-radius: 7px;
+    margin: 0px 8px;
+    
+}
+nav a:hover{
+    background: pink;
+    transition: 1s;
+}
+.activ{
+    background: pink;
+}
+/********************FIN DE NAV**********************/
+/***********************Bouton*************************/
+button{
+    position: fixed;
+    background: transparent;
+    right: 20px;
+    cursor: pointer;
+    font-size: 200%;
+    color:slategray;
+    border:none;
+    bottom: 40px;
+}
+/*********************Fin du Bouton********************/
+/********************DEBUT DE TEXTE*****************/
+.roboto p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/******************FIN DU TEXTE********************/
+/***************DEBUT DE PAGE SELECTEUR************/
+.select{
+    color: red;
+}
+.select p :first-of-type{ /* meme que first */
+    color:purple;
+}
+select p :last-of-type{
+    color: purple;
+}
+.select p:nth-of-type(5),.select p:nth-of-type(6){
+    color: black;
+}
+.select .zoneB .couleurBleu{
+    color: blue;
+}
+.select #zoneD span{/*Le span prendra en compte aussi. couleurBleu sauf pour la couleur car on l'aura déja définie*/
+    color: #32ff32;
+}
+.select .zoneA{
+    color: #f56;
+} 
+.select .zoneB{
+    color: #963;
+} 
+.select #zoneC{
+    color: #98f32f;
+} 
+/*****************FIN DE PAGE SELECTEUR**************/
+
+/******************DEBUT DE PAGE IMAGE***************/
+.imageFond{
+    background: #000 url(../img/fond.jpg) no-repeat; /*000 Noir*/ 
+    background-size: cover;
+}
+.imageFond p{
+    width: 75%;
+    margin: 100px auto 200px auto; /*auto permet de centrer*/
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+/*********************La Tour Eiffel******************/
+ img[src="img/toureiffel.jpg"]{
+    margin: auto;
+    width: 250px;
+    display: block;
+    border: 5px solid;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0,5);
+}
+/*********************ROTATION******************/
+.rotationImg{/* image de type inline-block, elle comporte des marges par défaut*/
+   text-align: center;  
+
+}
+
+.image{
+    margin: 20px;
+    border: 5px solid #eee;
+    box-shadow: 4px 4px rgba(0,0,0,0,5);/* cadre autour d'une image */
+    transition: 1s;
+}
+.image:hover{
+    transform: rotate(15deg); /* Pour faire une rotation a 15 deg*/
+}
+
+.rotation360:hover{
+    transform: rotate(-360deg);
+    
+}
+
+/*****************FIN DE PAGE IMAGE**************/
+/******************DEBUT DE PAGE POSITION***************/
+/* ----------------------Position absolute-------------------- */
+.centre{
+    margin:0 auto;
+    width: 500px;
+    background: #3cc;
+    color: white;
+    text-align: center;
+    line-height: 180px; /*interligne*/
+    font-size: 50px;
+    font-style: italic;
+    
+/* ----------------------Position relative-------------------- */
+}
+.relative{
+    background: red;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: 50px;
+    margin: 0 auto;
+} 
+.relative div{
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: blue;
+}
+/* ----------------------Position Fixed----------------------- */
+button :hover{
+    color: pink;
+    transition: 1s;
+} 
+/* --------------------------Pourcentage------------------------ */
+.trente{
+    width: 30%;
+    padding: 20px;
+    font-size: 22px;
+    background: #f1684e;
+    color: #efe94b;
+    font-weight: bold;
+}
+.cinquante{
+    width: 50%;
+    padding: 20px;
+    font-size: 22px;
+    background: #383746;
+    color: #efe94b;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.cent{
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+    background: #3cc;
+    color: #efe94b;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* ----------------------L'attribut float-------------------- */
+.carre{
+    width: 170px;
+    height: 170px;
+    background: rosybrown;
+    border: 3px solid #3cc;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    line-height: 150px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+ }
+ .carre:hover{
+    background: #dc143c;
+    border: 15px solid lightseagreen;
+    transition: 1s;
+    transform: rotate(45deg);
+    border-radius: 85px;
+ }
+
+.float2{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.rect{
+    height: 40px;
+    background: darkseagreen; 
+}
+.c1, .c2, .c3, .c4{
+    width: 25%;
+    height: 250px;
+    float: left;
+}
+.c1{
+    background: lightpink;
+}
+.c2{
+    background: lightblue
+}
+.c3{
+    background: lightgray;
+}
+.c4{
+    background: lightseagreen;
+}
+.clear{
+    clear: both;
+}
+/* -------------------------Flexbox----------------------- */
+
+/* Le flex : methode et techniques qui permettent de placer des élèments.
+Les parents vont leur mettre un display : flex et placent tes enfants */
+
+.flex{
+    display: flex;
+    /* justify-content: space-around; //les élèments s'affichent avec un espace égal autour de même */
+    justify-content: space-around;
+    flex-direction: row; /* flex-direction: row-reverse; // les élement s'inversent sur la rangée*/
+}
+.flex div{
+    width: 150px;
+    height: 150px;
+    background: indianred;
+    border: 3px solid;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+/*****************FIN DE PAGE POSITION**************/
+/******************DEBUT DE PAGE ZONING***************/
+/* Zoning 1 */
+#zoning1{
+    border: 3px solid;
+    
+}
+.haut{
+    background: rgb(235, 30, 235);
+    width: 100%;
+    height: 150px;
+}
+.gauche{
+    background: rgb(119, 11, 56);
+    height: 450px;
+    width: 150px;
+    float: left;
+}
+.droite{
+    background: pink;
+    height: 450px;
+
+}
+/* Zoning 2 */
+#zoning2{
+    border: 3px solid;
+}
+#zoning2 .gauche{
+    width: 25%;
+    height: 450px;
+}
+#zoning2 .milieu{
+    background: rgb(121, 85, 121);
+    width: 50%;
+    height: 450px;
+    float: left;
+}
+
+/* Zoning 3 */
+#zoning3{
+    border: 3px solid;
+}
+.bas{
+    background: rgb(128, 0, 38) ;
+    width: 100%;
+    height: 150px;
+}
+
+/* Zoning 4 */
+#zoning4{
+    border: 3px solid red;
+    text-align: center;
+}
+#zoning4 .menu{
+    background: #dc143c;
+    height: 95px;
+}
+#zoning4 .milieu{
+    background: rgb(104, 49, 58);
+    height: 500px;
+    border: 15px solid white;
+    padding-top: 5px;
+    margin: 20px;
+    width: 96%;
+}
+
+/* Zoning 5 */
+#zoning5{
+    border: 3px solid greenyellow;
+    text-align: center;
+}
+#zoning5 .milieu{
+    background: url(../img/fond.jpg);
+    height: 500px;
+    border: 15px solid white;
+    padding-top: 5px;
+}
+.a{
+    
+    height: 50%;
+    width: 50%;
+    float: left;
+}
+.a:hover{
+   
+    transition: 2s;
+    transform: rotate(360deg);
+    border-radius: 85px;
+}
+.b{
+    background: #98f32f;
+    height: 50%;
+    width: 50%;
+}
+.b:hover{
+    transition: 2s;
+    background: transparent;
+    transform: rotate(360deg);
+    border-radius: 85px;
+
+}
+.c{
+    background: #efe94b;
+    height: 50%;
+    width: 50%;
+    float: left;
+}
+.c:hover{
+    transition: 2s;
+    background: transparent;
+    transform: rotate(360deg);
+    border-radius: 85px;
+
+    
+}
+.d{
+    background: #f1684e;
+    height: 50%;
+    width: 50%;
+}
+.d:hover{
+    transition: 1s;
+    background: transparent;
+    transform: rotate(360deg);
+    border-radius: 85px;
+}
+.a,.b,.c,.d{
+    display: inline-block;
+}
+
+/* Zoning 6 */
+#zoning6{
+    border: 3px solid greenyellow;
+    text-align: center;
+    height: 1000px;
+}
+#zoning6 .haut{
+    height: 250px;
+    width: 100%;
+}
+.haut1{
+background: pink;
+width: 25%;
+height: 250px;
+float: left;
+}
+.haut2{
+    background: beige;
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+.haut3{
+    background: pink;
+    width: 25%;
+    height: 250px;
+    }
+.Menu{
+    height: 30px;
+    width: 100%;
+    background: bisque;
+}
+.aside{
+    background: orangered;
+    height: 600px;
+    float: left;
+    width: 20%;
+}
+ .milieu{
+    height: 200px;
+    width: 100%;
+}
+.milieuA{
+    background: #32ff32;
+    width: 40%;
+    height: 200px;
+    float: left;
+}
+.milieuB{
+    background: purple;
+    height: 200px;
+} 
+.slideshow{
+    background: #3cc;
+    height: 200px;
+    width: 100%;
+} 
+
+.milieuC, .milieuE{
+    background: #f56;
+    float: left;
+    height: 200px;
+    width: 20%;
+}
+.milieuD, .milieuF{
+    background: #dc143c;
+    float: left;
+    height: 200px;
+    width: 20%;
+} 
+/*****************FIN DE PAGE ZONING**************/
+/*****************DEBUT DE PAGE LISTE**************/
+ul.fruit{
+    /* je cible ul qui est dans la class fruit differend avec espace je cible la class fruit qui se trouve dans ul */
+    list-style: none;
+}
+ul .fruit li{
+    display: inline;
+    margin: 15px;
+}
+li .fa{
+    font-size: 80%;
+    color: tomato;
+}
+.imbriquee, .imbriquee ul{
+    padding-left: 15px;
+    margin: 5px;
+    cursor: pointer; 
+}
+/* .imbriquee li:not(.eu), .imbriquee li:not(.asie){
+    margin-left:15px;
+ } */
+.asie ul li:hover{
+    color: tomato;
+    font-size: 30px;
+    transition:2s;
+}
+.asie span:hover{
+    color: tomato;
+    font-size: 30px;
+    transition: 1s;
+}
+.eu ul li:hover{
+    color: tomato;
+    font-size: 30px;
+    transition: 1s;
+}
+.eu span:hover{
+    color: tomato;
+    font-size: 30px;
+    transition: 1s;
+}
+.asie span, .eu span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*****************FIN DE PAGE LISTE**************/
+/*****************DEBUT DE PAGE LIENS**************/
+.ancre{
+    text-align: center;
+    margin: 15px;
+}
+.ancre a{
+    color: white;
+    background: #f1684e;
+    padding: 7px;
+    text-decoration: none;
+    border-radius: 7px;
+    margin: 5px; 
+    box-shadow: 0px 1px 24px 0px rgba(46,50,50,0.73);
+}
+.ancre a:hover{
+    font-size: 150%;
+    transition: 2s;
+}
+.contAncre{
+    border-top: 2px solid;
+    border-bottom: 2px solid;  
+}
+#lien a{
+    text-decoration: none;
+    color: #2680b9;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 120%;
+}
+
+#lien a:hover{
+    color: #dc143c;
+}
+/***** Menu *****/
+#menus nav{
+    background: transparent;
+    border: none;
+}
+#menus ul{
+    list-style: none;
+    text-align: center;
+}
+#menus ul li{
+    display: inline-block;
+}
+#menus nav a{
+    padding: 10px;
+    color: rgb(220, 20, 187);
+    text-decoration: none;
+    background: white;
+}
+#menus nav a:hover{
+    background: purple;
+    font-weight: bold;
+    transition: 1s ease-in-out;/*Pour faire un effet du couleur du plus clair au foncé*/
+}
+/***** Menu Déroulant*****/
+#menuDeroulant{
+    height: 650px;
+}
+#menuDeroulant nav{
+    background: transparent;
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+}
+#menuDeroulant nav ul li{
+    float: left;
+    list-style: none;
+    width: 20%;
+}
+#menuDeroulant ul ul{/*Les Listes qui sont dans Les Listes*/
+    display: none;
+}
+#menuDeroulant nav ul li ul li{
+    border-top: 1px solid pink;
+    width: 100%;
+}
+#menuDeroulant nav li{
+    background: gainsboro;
+}
+#menuDeroulant nav li a{
+    text-decoration: none;
+    color: #000;
+    padding: 4px 0 4px;
+    display: block;/* Pour q'il s'etende sur toute la largeur de son conteur*/
+    background: mistyrose;
+}
+#menuDeroulant nav ul.niveau1 li.sousMenu:hover ul.niveau2{
+    display: block;
+}
+
+/*****************FIN DE PAGE LIENS**************/
+/*****************DEBUT DE PAGE TABLEAUX**************/
+
+table{
+    border: 4px solid palevioletred; 
+    border-collapse: collapse;
+    width: 90%; 
+    margin: 25px;
+}
+caption{
+    font-size: 25px;
+}
+thead, tfoot{
+    background-color: #e6e6fa;
+    border: 2px solid  purple;
+}
+tbody{
+    border:1px solid  purple;
+}
+
+th{
+    border: 1px solid purple;
+    padding: 4px;
+    background-color: #e6e6fa;
+    width: 25%;
+}
+td{
+    font-size: 100%;
+    border: 1px solid purple;
+    text-align: center;
+    padding: 5px;
+
+}
+.color{
+    background: none;
+}
+/*****************FIN DE PAGE TABLEAUX**************/
+/*****************DEBUT DE PAGE FORMULAIRE**************/
+form{
+    width: 70%;
+    background: plum;
+    margin: 0 auto;
+    padding: 20px; 
+    color:white; 
+    border-radius: 20px;
+}
+label{
+    margin: 10px 0;
+    width: 50%;
+    display: inline-block;
+}
+textarea{
+    resize: none;
+}
+label[for="orange"], label[for="fraise"], label[for="mangue"] {
+   width: 10%;
+}
+
+/*****************FIN DE PAGE FORMULAIRE**************/
+/*****************DEBUT DE PAGE ANIMATIONS**************/
+.infoBulle{
+    height: 250px;
+    width: 500px;
+    margin: auto;
+    padding-top: 15px;
+    background: slategray;
+    box-shadow: 0 0 50px #222 inset /*effet à l'intérieur de l'élément*/
+}
+.infoBulle p{
+    text-align: center;
+    padding-top: 30px;
+}
+.infoBulle a{
+    color: white;
+    text-shadow: 0 -2px 0 black;
+    text-decoration: none;
+    border-radius: 3px;
+    padding:5px 15px;
+}
+.infoBulle a:hover{
+    text-shadow: 0 1px 2px black; /*shadow cest pour faire un effet*/
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    color: white;
+}
+.infoBulle a span{
+    position: absolute;
+    padding: 15px;
+    margin-top: 23px;
+    margin-left: -35px;
+    background: rgba(0,0,0,0.9);
+    opacity: 0;
+    color: pink;
+    transform: scale(0) rotateZ(-12deg);
+    transition: .25s;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+.infoBulle a:hover span{
+    opacity: 1;
+    transform: scale(1) rotateZ(0);
+}
+.infoBulle a span:before{
+    content:'';
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    border-bottom: 6px solid rgba(0,0,0,.9);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+/* Effet survol avec transition et filtres */
+.imgEffets{
+    width: 302px;
+    height: 320px;
+    margin: 70px auto;
+}
+.imgEffets li{
+    list-style: none;
+    float: left;
+    width: 141px;
+    height: 150px;
+    margin: 5px;
+}
+.imgEffets li:nth-child(3){
+    clear: both;
+}
+.imgEffets img{
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    box-shadow:0 0 3px black;
+    transition: .5s cubic-bezier(0,3,.4,1);
+}
+.imgEffets li:hover img{
+    z-index: 2;
+    transform: scale(1.5);
+    box-shadow:0 0 10px black;
+}
+.imgEffets:hover li:not(:hover) img{/*je mets ai survol de la classe imgEffets je met les image en gris et en flou */
+    filter: grayscale(1) blur(8px);
+}
+/* -----------Menu rotation---------- */
+#menuRotate{
+    height: 360px;
+    width: 576px;
+    margin: 100px auto;
+    background: rgb(240, 105, 128);
+    position: relative; /* absolute en fonction du body sauf si son parent est en relative */
+    overflow: hidden;
+    border: 2px solid lightblue;
+}
+#menuRotate .masque{
+    position: absolute;
+    z-index: 50;
+    width: 585px;
+    height: 135px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgb(192, 116, 199), pink);
+}
+#menuRotate .ombre{
+    position: absolute;
+    z-index: 40;
+    width: 300px;
+    height: 6px;
+    box-shadow: 0px 100px 3px lightseagreen;
+    border-radius: 75px / 3px; /*rayon horizontaux / rayons verticaux */
+    top: 32px;
+    left: 142px;
+}
+#menuRotate dl{
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 155px;
+    color: white;
+    text-align: center;
+    background: lightcoral;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+    transform-origin: 50% 120px;
+    animation: bounceOut 0.7s ease-in-out;
+}
+#menuRotate dt{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    padding-top: 5px;
+}
+#menuRotate dd{
+    transform: rotate(180deg);
+}
+#menuRotate dd a{
+    display: block;
+    height: 24px;
+    padding: 3px 0;
+    color: white;
+    text-decoration: none;
+}
+#menuRotate dd a:hover{
+    background: rgba(255,255,255,0.1);
+}
+#menuRotate dl:hover{
+    transform: rotate(-180deg);
+    animation: bouceIn 0.7s ease-in-out;
+}
+@keyframes bouceIn{
+    from{transform: rotate(0deg);}
+    75%{transform: rotate(-200deg);}
+    90%{transform: rotate(-175deg);}
+    to{transform: rotate(-180deg);}
+}
+@keyframes bouceOut{
+    from{transform: rotate(0deg);}
+    0%{transform: rotate(-180deg);}
+    10%{transform: rotate(-165deg);}
+    to{transform: rotate(-360deg);}
+}
+
+
+ /*****************FIN DE PAGE ANIMATIONS**************/

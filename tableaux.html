@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ma page structure</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link href="https://fonts.googleapis.com/css?family-salsa" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amitic+SC|Dancing+Script|Old+Standar+TT">
-    <link rel="stylesheet" href="font-awesome/font-awesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tableaux</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link href="https://fonts.googleapis.com/css?family-salsa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amitic+SC|Dancing+Script|Old+Standar+TT">
+        <link rel="stylesheet" href="font-awesome/font-awesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+       
    
 </head>
 
@@ -45,16 +47,64 @@
        <a href="animations.html">Animation</a>
        <a href="fancy_box.html">Fancy Box</a>
 </nav>
+<main>
+    <h2>Les Tableaux</h2>
+    <table>
+        <caption><i class="fas fa-plane-departure"></i> Vols Paris Rome</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>02/08/2017</th>
+                <th>08/08/2017</th>
+                <th>05/08/2017</th>
+            </tr>
+        </thead>
+        <tfoot>
+                <td></td>
+                <td>02/08/2017</td>
+                <td>08/08/2017</td>
+                <td>05/08/2017</td>
+        </tfoot>
+        
+        <tbody>
+            <tr>
+                <th rowspan="2" class="color">Air France</th>
+                <td>Départ 10h - Arrivée 13h </td>
+                <td>Départ 15h - Arrivée 18h </td>
+               
+                <td>Départ 17h - Arrivée 20h </td>
+            </tr>
+
+            <tr>
+                <td>200€</td>
+                <td>180€</td>
+                <td>170€</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2" class="color">Alitalia</th>
+                <td>Départ 6h - Arrivée 9h </td>
+                <td>Départ 13h - Arrivée 16h </td>
+                <td>Départ 21h - Arrivée 00h </td>
+            </tr>
+            
+            <tr>
+                <td>120€</td>
+                <td>250€</td>
+                <td>100€</td>
+            </tr>
+
+        </tbody>
+    </table>
+</main>
 
 
 
 
-
-
+<a href="#logo"><button type="button"><i class="fa fa-arrow-circle-up fa-1x" aria-hidden="true"></i></button></a>
 <footer>
     <!-- zone du bas, ex : liens...  -->
 </footer>
-<a href="#logo"><button type="button"><i class="fa fa-arrow-circle-up" arial-hidden></i></button></a>
 
 
 
